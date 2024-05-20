@@ -10,6 +10,9 @@ dotenv.config();
 export const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.get("/", (req, res) => {
+  res.send("Welcome to Polling API");
+});
 app.use("/questions", questionRouter);
 app.use("/options", optionRouter);
 
