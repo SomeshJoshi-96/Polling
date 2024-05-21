@@ -16,6 +16,6 @@ export const optionSchema = new mongoose.Schema({
 });
 
 optionSchema.pre("save", function (next) {
-  this.link_to_vote = `http://localhost:8000/options/${this._id}/add_vote`;
+  this.link_to_vote = `https://polling-v4gh.onrender.com/options/${this._id}/add_vote`;
   next();
 });
